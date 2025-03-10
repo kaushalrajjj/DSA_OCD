@@ -2,7 +2,8 @@
 // https://leetcode.com/problems/can-place-flowers/description/?envType=problem-list-v2&envId=greedy
 // Code:-
 
-
+#include <bits/stdc++.h>
+using namespace std;
 
 class Solution {
     public:
