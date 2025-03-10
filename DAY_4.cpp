@@ -4,6 +4,9 @@ https://leetcode.com/problems/count-distinct-numbers-on-board/description/?envTy
 //t=O(1)
 //S=O(1)
 //for every number there is number-1 which give remainder 1
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
    int distinctIntegers(int n) {

@@ -4,6 +4,9 @@
 // check for continous more than 5 vowel otherwise if only 5 vowel is there than if it is accompanied by 2 question mark than it baecame bad  no similarly if there is 3  consonent todether then it
 //  it is bad string else it is good string
 
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution
 {
 public:

@@ -1,6 +1,8 @@
 //Question-1
  //https://leetcode.com/problems/flipping-an-image/?envType=problem-list-v2&envId=array
- 
+ #include <bits/stdc++.h>
+using namespace std;
+
  
  class Solution {
     public:
