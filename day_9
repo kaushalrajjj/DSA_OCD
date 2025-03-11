@@ -1,0 +1,67 @@
+// day : 9
+
+// topic : Array
+
+// Level : Easy 
+
+// q-1 : https://leetcode.com/problems/two-sum/description/
+// q-2 : https://leetcode.com/problems/sort-colors/description/
+// q-3 : https://www.geeksforgeeks.org/problems/max-sum-in-sub-arrays0824/0
+
+//q1 two sum
+#include <bits/stdc++.h>
+using namespace std;
+class Solution {
+    public:
+        vector<int> twoSum(vector<int>& nums, int target) {
+            vector<int> a;
+            int f=0; 
+            for(int i=0;i<nums.size();i++)
+            {
+                for(int j=0;j<nums.size();j++)
+                {
+                    if(i!=j)
+                    {
+                        if(nums[i]+nums[j]==target)
+                        {
+                            a.push_back(i);
+                            a.push_back(j);
+                            f=1;
+                            break;
+                        }
+                    }
+                }
+                if(f==1)
+                {
+                    break;
+                }
+            }
+            return a;
+        }
+    };
+
+
+
+    //q2  sort color
+
+    class Solution {
+        public:
+            void sortColors(vector<int>& nums) {
+                  int left=0,mid=0,right=nums.size()-1;
+                  while(mid<=right){
+                    if(nums[mid]==0){
+                       swap(nums[left],nums[mid]);
+                       mid++;
+                       left++;
+                    } else if(nums[mid]==1){
+                        mid++;
+                    }
+                      else if(nums[mid]==2){
+                       swap(nums[mid],nums[right]);
+                        
+                        right--;
+                    }
+                     
+                  }
+            }
+        };
