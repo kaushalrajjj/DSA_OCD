@@ -1,0 +1,59 @@
+// topic : array
+
+// level : medium
+
+// q-1: https://leetcode.com/problems/pascals-triangle/description/
+// q-2: https://leetcode.com/problems/rotate-image/description/
+// q-3: https://leetcode.com/problems/spiral-matrix/description/
+
+
+//q1
+//t=O(n^2)  S=O(1)
+class Solution {
+public:
+    vector<vector<int>> generate(int numRows) {
+        
+          vector<vector<int>> triangle(numRows);
+
+    for (int i = 0; i < numRows; i++) {
+        triangle[i].resize(i + 1, 1);  
+       
+        for (int j = 1; j < i; j++) {
+            triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
+        }
+    }
+
+    return triangle;
+    }
+};
+
+//qQ2
+//T=O(n^2)  S=O(1)
+
+
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+
+        for(int i=0;i<matrix.size();i++){
+            for(int j=i;j<matrix[i].size();j++){
+                swap(matrix[i][j],matrix[j][i]);
+            }
+        }
+      {
+            for(int j=0;j<matrix[0].size();j++){
+                  int l=0,h=matrix.size()-1;
+                 while(l<=h){
+                      swap(matrix[j][l],matrix[j][h]);
+                        l++;
+                        h--;
+                        }
+            }
+        }
+         
+        
+    }
+};
+
+
+//q3
